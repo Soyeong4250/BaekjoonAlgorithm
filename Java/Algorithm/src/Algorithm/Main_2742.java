@@ -8,7 +8,7 @@ public class Main_2742 {  // 기찍 N
 		Scanner sc = new Scanner(System.in);
 
 		int N = sc.nextInt();
-		for (int i = N; i > 0; i--) {
+		for (int i = N; i > 0; i--) { 
 			System.out.println(i);
 		}
 	}

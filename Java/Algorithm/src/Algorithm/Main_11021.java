@@ -1,7 +1,7 @@
 package Algorithm;
 
 import java.util.Scanner;
-
+ 
 public class Main_11021 {  // A+B-7
 
 	public static void main(String[] args) {

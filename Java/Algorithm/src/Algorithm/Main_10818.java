@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_10818 {  // 최소, 최대
+public class Main_10818 {  // 최소, 최대 
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

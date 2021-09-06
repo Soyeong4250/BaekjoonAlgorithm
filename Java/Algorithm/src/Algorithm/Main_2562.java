@@ -3,7 +3,7 @@ package Algorithm;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main_2562 {  // 최댓값
+public class Main_2562 {  // 최댓값 
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

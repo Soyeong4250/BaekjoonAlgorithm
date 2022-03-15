@@ -19,21 +19,20 @@ public class Main_10845 {  // 큐
 			int number = 0;
 			if(st.hasMoreTokens()) {
 				number = Integer.parseInt(st.nextToken());
-//				System.out.println(number);
+//				System.out.println(number);  // 확인
 			}
-			int result = 0;
 			
 			if(command.equals("push")) {
-				deque.push(number);
+				deque.add(number);
 //				result = number;
 			}else if(command.equals("pop")) {
 				if(deque.isEmpty()) {
 					System.out.println(-1);
 				}else {
-					result = deque.pop();
+					System.out.println(deque.pop());
 				}
 			}else if(command.equals("size")) {
-				result = deque.size();
+				System.out.println(deque.size());
 			}else if(command.equals("empty")) {
 				if(deque.isEmpty()) {
 					System.out.println(1);
@@ -48,12 +47,11 @@ public class Main_10845 {  // 큐
 				}
 			}else if(command.equals("back")) {
 				if(deque.isEmpty()) {
-					result = -1;
+					System.out.println(-1);
 				}else {
-					result = deque.getLast();
+					System.out.println(deque.getLast());
 				}
 			}
 		}
 	}
-
 }

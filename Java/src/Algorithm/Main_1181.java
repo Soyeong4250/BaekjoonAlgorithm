@@ -3,6 +3,7 @@ package Algorithm;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -38,6 +39,17 @@ public class Main_1181 {  // 단어 정렬
 		});
 		
 		System.out.println(Arrays.toString(dict));
+		List<String> result = new ArrayList<>();
+		for (int i = 0; i < dict.length; i++) {
+			if(0 < i && dict[i-1].equals(dict[i])) {
+				continue;
+			}
+			result.add(dict[i]);
+		}
+		
+		for (int i = 0; i < result.size(); i++) {
+			System.out.println(result.get(i));
+		}
 	}
 
 }

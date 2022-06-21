@@ -37,8 +37,7 @@ public class Main_1181 {  // 단어 정렬
 			}
 			
 		});
-		
-		System.out.println(Arrays.toString(dict));
+
 		List<String> result = new ArrayList<>();
 		for (int i = 0; i < dict.length; i++) {
 			if(0 < i && dict[i-1].equals(dict[i])) {

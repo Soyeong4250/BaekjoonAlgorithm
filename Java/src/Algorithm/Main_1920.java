@@ -34,9 +34,9 @@ public class Main_1920 {  // 수 찾기
 					result = 1;
 					break;
 				}else if(arr2[i] < arr[idx]) {
-					idx -= 1;
+					idx -= idx/2;
 				}else {
-					idx += 1;
+					idx += idx/2;
 				}
 			}
 			System.out.println(result);

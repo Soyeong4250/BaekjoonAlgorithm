@@ -14,22 +14,22 @@ public class Main_11659 { // 구간 합 구하기 4
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-		int[] arr = new int[N];
+		int[] sum = new int[N+1];
 		st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < N; i++) {
-			arr[i] = Integer.parseInt(st.nextToken());
+		sum[0] = 0;
+		for (int i = 1; i <= N; i++) {
+			sum[i] = sum[i-1] + Integer.parseInt(st.nextToken());
 		}
+		
+//		System.out.println(Arrays.toString(sum));
 		
 		for (int i = 0; i < M; i++) {
 			st = new StringTokenizer(br.readLine());
+			
 			int start = Integer.parseInt(st.nextToken());
 			int end = Integer.parseInt(st.nextToken());
-			int result = 0;
-			for (int j = start-1; j < end; j++) {
-				result += arr[j];
-			}
-			System.out.println(result);
 			
+			System.out.println(sum[end] - sum[start-1]);
 		}
 	}
 }

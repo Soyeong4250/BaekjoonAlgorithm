@@ -9,8 +9,8 @@ public class Main_11654 {  // 아스키코드
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int ascii = (int)br.readLine();
-		System.out.println(ascii);
+		char ascii = br.readLine().charAt(0);
+		System.out.println((int)ascii);
 	}
 
 }

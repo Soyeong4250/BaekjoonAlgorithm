@@ -16,43 +16,32 @@ public class Main_2480 {  // 주사위 세개
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
+		HashMap<Integer, Integer> dice = new HashMap<>();
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		HashMap<Integer, Integer> hash = new HashMap();
-		int max = 0;
-		while(st.hasMoreTokens()) {
-			int key = Integer.parseInt(st.nextToken());
-			hash.put(key, hash.getOrDefault(key, 0)+1);
-			if(max < key) {
-				max = key;
-			}
+		int max = -1;
+		for (int i = 0; i < 3; i++) {
+			int spot = Integer.parseInt(st.nextToken());
+			if(spot > max) max = spot;
+			dice.put(spot, dice.getOrDefault(spot, 0) + 1);
 		}
-		List<Entry<Integer, Integer>> list_entries = new ArrayList<Entry<Integer, Integer>>(hash.entrySet());
-		Collections.sort(list_entries, new Comparator<Entry<Integer, Integer>>(){
+		
+		List<Entry<Integer, Integer>> dice_list = new ArrayList<Entry<Integer, Integer>>(dice.entrySet());
+		Collections.sort(dice_list, new Comparator<Entry<Integer, Integer>>(){
 
 			@Override
 			public int compare(Entry<Integer, Integer> o1, Entry<Integer, Integer> o2) {
-				
-				return o1.getValue().compareTo(o2.getValue());
-			}
-			
+				// 내림차순 정렬
+				return o2.getValue().compareTo(o1.getValue());
+			}			
 		});
-//		 System.out.println(hash);
 		
-		int sum = 0;
-		for(int key : hash.keySet()) {
-			if(hash.get(key) == 3) {
-				sum = 10000 + key * 1000;
-				break;
-			}else if(hash.get(key) == 2) {
-				sum = 1000 + key * 100;
-				break;
-			}else {
-				sum = max * 100;
-				break;
-			}
+		if(dice_list.get(0).getValue() == 3) {
+			System.out.println(10000 + dice_list.get(0).getKey() * 1000);
+		}else if(dice_list.get(0).getValue() == 2) {
+			System.out.println(1000 + dice_list.get(0).getKey() * 100);
+		}else {
+			System.out.println(max * 100);
 		}
-		
-		System.out.println(sum);
 	}
 
 }

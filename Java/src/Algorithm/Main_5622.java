@@ -13,7 +13,17 @@ public class Main_5622 {  // 다이얼
 		
 		int sum = 0;
 		for (int i = 0; i < dial.length(); i++) {
-			sum += ((int)dial.charAt(i) - 65)/3 + 2 + 1;
+			char ch = dial.charAt(i);
+			
+			if(ch <= 'O') {
+				sum += ((int)ch - 65)/3 + 2 + 1;
+			} else if('P' <= ch && ch <= 'S') {
+				sum += 8;
+			} else if('T' <= ch && ch <= 'V') {
+				sum += 9;
+			} else if('W' <= ch && ch <= 'Z') {
+				sum += 10;
+			}
 		}
 		
 		System.out.println(sum);

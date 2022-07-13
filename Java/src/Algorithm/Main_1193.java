@@ -13,8 +13,8 @@ public class Main_1193 {
 		int numerator = 1;
 		int denominator = 1;
 		
-		int[] ndir = {1, -1};
-		int[] ddir = {-1, 1};
+		int[] ndir = {-1, 1};
+		int[] ddir = {1, -1};
 		
 		if(X == 1) {
 			System.out.println("1/1");
@@ -23,13 +23,13 @@ public class Main_1193 {
 		
 		int d = 0;
 		for (int i = X-2; i >= 0; i--) {
-			if(numerator == 1) {
+			if(d == 1 && numerator == 1) {
 				denominator += 1;
 				d = 0;
 				continue;
 			}
 			
-			if(denominator == 1) {
+			if(d == 0 && denominator == 1) {
 				numerator += 1;
 				d = 1;
 				continue;
@@ -38,6 +38,8 @@ public class Main_1193 {
 			denominator += ndir[d];
 			numerator += ddir[d];
 		}
+		
+		System.out.println(numerator + "/" + denominator);
 	}
 
 }

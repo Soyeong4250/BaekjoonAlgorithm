@@ -40,5 +40,4 @@ public class Main_10986 {  // 나머지 합 구하기
 		
 		
 	}
-
 }

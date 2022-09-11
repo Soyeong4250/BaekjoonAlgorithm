@@ -18,12 +18,13 @@ public class Main_2675 {  // 문자열 반복
 			
 			StringBuilder sb = new StringBuilder();
 			for (int i = 0; i < S.length(); i++) {
-				
+				for (int j = 0; j < cnt; j++) {
+					sb.append(S.charAt(i));
+				}
 			}
+			System.out.println(sb.toString());
 			
 		}
-		
-		
 		
 	}
 

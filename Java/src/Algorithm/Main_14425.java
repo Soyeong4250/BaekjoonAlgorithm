@@ -15,20 +15,10 @@ public class Main_14425 {  // 문자열 집합
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-		HashSet<String> hash = new HashSet<>();
-		for (int i = 0; i < N; i++) {
-			hash.add(br.readLine());
+		while(true) {
+			String word = br.readLine();
+			
 		}
-		
-		int result = 0;
-		for (int i = 0; i < M; i++) {
-			String str = br.readLine();
-			if(hash.contains(str)) {
-				result += 1;
-			}
-		}
-		
-		System.out.println(result);
 	}
 
 }

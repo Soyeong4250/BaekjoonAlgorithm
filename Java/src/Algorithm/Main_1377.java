@@ -24,6 +24,12 @@ public class Main_1377 {  // 버블 소트
 		
 		Arrays.sort(arr2);  // 정렬
 		
+		for (int i = 0; i < arr.length; i++) {
+			
+			for (int j = 0; j < arr2.length; j++) {
+				
+			}
+		}
 		
 	}
 

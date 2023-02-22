@@ -13,6 +13,7 @@ public class Main9184 { // 신나는 함수 실행
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String tc;
+		StringBuilder sb = new StringBuilder();
 		while((tc = br.readLine()) != null) {
 			StringTokenizer st = new StringTokenizer(tc);
 			
@@ -21,21 +22,23 @@ public class Main9184 { // 신나는 함수 실행
 			int c = Integer.parseInt(st.nextToken());
 			
 			if(a == -1 && b == -1 && c == -1) {
+				System.out.println(sb.toString());
 				return;
 			}
-			main.solution(a, b, c);
+			
+			sb.append(main.solution(a, b, c)).append("\n");
 		}
 	}
 
-	private void solution(int a, int b, int c) {
-		
-		long startTime = System.currentTimeMillis();
+	private String solution(int a, int b, int c) {
+		StringBuilder sb = new StringBuilder();
+//		long startTime = System.currentTimeMillis();
 		int answer = recursive(a, b, c);
-		System.out.println("w(" + a + ", " + b + ", " + c + ") = " + answer);
-//		System.out.printf("w(%d, %d, %d) = %d\n", a, b, c, answer);
-		long endTime = System.currentTimeMillis();
-		System.out.println("걸린 시간 = " + (endTime - startTime));
-		
+//		System.out.println("더하기");
+		sb.append("w(").append(a).append(", ").append(b).append(", ").append(c).append(") = ").append(answer);
+//		long endTime = System.currentTimeMillis();
+//		System.out.println("걸린 시간 = " + (endTime - startTime));
+		return sb.toString();
 	}
 	
 	static int[][][] memo = new int[21][21][21];

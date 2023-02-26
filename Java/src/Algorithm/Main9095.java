@@ -12,28 +12,20 @@ public class Main9095 { // 1, 2, 3 더하기
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
+		
+		StringBuilder sb = new StringBuilder();
 		for (int t = 0; t < T; t++) {
 			int n = Integer.parseInt(br.readLine());
-			System.out.println(main.solution(n));			
+			sb.append(main.solution(n)).append("\n");			
 		}
+		System.out.println(sb.toString());
 	}
 
 	private int solution(int n) {
-		int[] dp = new int[n+1];
+		int[] dp = new int[11];
 		dp[1] = 1;
-		if(n == 1) {
-			return dp[n];
-		}
-		
 		dp[2] = 2;
-		if(n == 2) {
-			return dp[n];
-		}
-		
 		dp[3] = 4;
-		if(n == 3) {
-			return dp[n];
-		}
 		
 		for (int i = 4; i <= n; i++) {
 			dp[i] = dp[i-1] + dp[i-2] + dp[i-3];

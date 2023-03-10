@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  * 메모리 : 14320KB
  * 시간 : 144ms
  */
-public class Main2231_F { // 분해합
+public class Main2231 { // 분해합
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

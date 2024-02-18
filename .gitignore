@@ -3,3 +3,5 @@
 *.class
 .project
 *.classpath
+Java/.idea/
+Java/Boj.iml
